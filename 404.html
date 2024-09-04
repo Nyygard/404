@@ -1,4 +1,58 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Entry Picker</title>
+</head>
+
+<style>
+    #randomEntry{
+        white-space: pre-line;
+    }
+</style>
+
+<body onload="pickRandomEntry()">
+    <p id="randomEntry">?</p>
+</body>
+
+
+<script>
+    const entries = [
+        "My future self keeps sending me warnings, but I am ignoring them like spam emails.\n" +
+        "hash: 133353022015798167800137935409764993859123364918\n" +
+        "r:  59609990575009966923957810234548712491789468486297629467743124831045470018308\n" +
+        "s:  97916595061352800311017536723105451542582714052572256606304672606565061344341",
+        "Am I stuck in a loop?\n" +
+        "hash: 369005523331573790783983523921041491745464932194\n" +
+        "r:  59609990575009966923957810234548712491789468486297629467743124831045470018308\n" +
+        "s: 54376547856445976174309186043233196967982214590951385987943673681546926437978",
+        "01000001 01101100 01100010 01101001 01101110\n" +
+        "hash: 616993511928517769703022722833395960162722158380\n" +
+        "r:  59609990575009966923957810234548712491789468486297629467743124831045470018308\n" +
+        "s: 54415290167891101566838708033317523005085658778235043548298164231285859657424",
+        "Why time travel when I can procrastinate until tomorrow?\n" +
+        "hash:  784293469968264490339994225362294903143751140414\n" +
+        "r: 59609990575009966923957810234548712491789468486297629467743124831045470018308\n" +
+        "s: 60247803451592285271584878861153751938982220528903979515164618129284564097291",
+        "Accidentally drove on a butterfly in the past, now my Wi-Fi will not work\n" +
+        "hash: 183220684635103158085459308890706374449953736741\n" +
+        "r: 59609990575009966923957810234548712491789468486297629467743124831045470018308\n" +
+        "s: 41474824572128727777762845770207727879632374742667254953692807458179545508901",
+        "Bitcoin level security!\n" +
+        "hash: 19263752157887571902532176770682513706038300804\n" +
+        "r: 59609990575009966923957810234548712491789468486297629467743124831045470018308\n" +
+        "s: 56791658798163580085260067219371976535336835044501215281275051615351527145878"
+    ];
+
+    function pickRandomEntry() {
+        const randomIndex = Math.floor(Math.random() * entries.length);
+        const randomEntry = entries[randomIndex];
+        document.getElementById('randomEntry').textContent = randomEntry;
+    }
+</script>
+</html>
+/*<!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -118,3 +172,4 @@ addCloud:function(){this.clouds.push(new p(this.canvas,this.spritePos.CLOUD,this
 </footer>
 </body>
 </html>
+*/
